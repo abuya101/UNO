@@ -31,8 +31,15 @@ require_once 'header.php';
   5. Push the changes to your repo.                                                                                                                            *
   6. Submit the github url on google classroom (Check Quiz 1 3B)                                                                                               *
  ***************************************************************************************************************************************************************/
+<<<<<<< HEAD
  //add functions file
  require_once 'functions.php';
+=======
+
+ //add functions file
+ require_once 'functions.php';
+
+>>>>>>> e4ee2ac230d24ca2463437175aa576f44fef1e01
  $quotes = "'Joy is the serious business of heaven.'.LEWIS,CLIVE STAPLES.1964-01-01.https://bit.ly/2HwPJd6
  |'We were not meant to be somebody--we were meant to know Somebody'.PIPER,JOHN STEPHEN.2011-07-17.https://bit.ly/2r31InJ|'He who sings prays twice.'.Hipponensis,Aurelius Augustinus.430-02-30.https://bit.ly/2JwSHuH
  |'The task of the modern educator is not to cut down jungles but to irrigate deserts.'.LEWIS,CLIVE STAPLES.1943-09-23.https://bit.ly/2HwPJd6
@@ -48,24 +55,44 @@ require_once 'header.php';
 ";
   //get the individual quotes first - split by |
   $quotes_array = explode('|',$quotes);
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4ee2ac230d24ca2463437175aa576f44fef1e01
   #sweet function that runs a user defined function on every element of the array
   #Here we just modify the array instead of creating another variable
   #Note that the callback specified is intended to take into consideration that we are not
   #to modify the  although it has the same delimeter as the other fields i.e dots
   array_walk($quotes_array,'getcsv_custom2');
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4ee2ac230d24ca2463437175aa576f44fef1e01
   //start ordered list
   echo '<ol type="a" >';
   //counter for total quotes
   $quotes_counter = 0;
   //an array to store unique authors
   $authors_array = [];
+<<<<<<< HEAD
   foreach($quotes_array as $key => $value){
+=======
+
+  foreach($quotes_array as $key => $value){
+
+>>>>>>> e4ee2ac230d24ca2463437175aa576f44fef1e01
       echo '<li>';
       //remove the url chunks and create another array.
       $url_pieces = array_splice($value, 3);
       //combine the chunks into a string
       $url_string = implode('.',$url_pieces);
+<<<<<<< HEAD
       foreach( $value as $key2 => $value2 ):
+=======
+
+      foreach( $value as $key2 => $value2 ):
+
+>>>>>>> e4ee2ac230d24ca2463437175aa576f44fef1e01
         //this is the Quote
         if( $key2 == 0 ):
           $quote = $value2;
@@ -85,7 +112,13 @@ require_once 'header.php';
           echo "<span class='quotes_galore'>\"{$quote}\"</span> - ".$name." ({$quote_year}).";
         endif;
       endforeach;
+<<<<<<< HEAD
       echo '</li>';
+=======
+
+      echo '</li>';
+
+>>>>>>> e4ee2ac230d24ca2463437175aa576f44fef1e01
       //increment quotes counter
       $quotes_counter++;
   }
